@@ -6,4 +6,7 @@ stage('SCM Checkout') {
      def mvnHome = tool name: 'Maven',type: 'maven'
       sh "${mvnHome}/bin/mvn package"
       }
+      stage('Email Notification'){
+      mail bcc: '', body: 'Hi ,Email Notification For Jenkins Build', cc: '', from: '', replyTo: '', subject: 'Jenkins Build', to: 'althaf.kommadi@testingxperts.com'
+      }
  }
