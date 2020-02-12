@@ -15,5 +15,4 @@ stage('SCM Checkout') {
      sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@184.72.127.218:/opt/apache-tomcat-9.0.30/webapps/'
 }
       
-      }
-}
+}}
