@@ -9,4 +9,10 @@ stage('SCM Checkout') {
       stage('Email Notification'){
       mail bcc: '', body: 'Hi ,Email Notification For Jenkins Build', cc: '', from: '', replyTo: '', subject: 'Jenkins Build', to: 'althaf.kommadi@testingxperts.com'
       }
+      stage('Deployment to tomcat')
+      {
+      
+      sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@184.72.127.218/home/ec2-user/apache-tomcat-9.0.30/webapps/
+'
+      }
  }
