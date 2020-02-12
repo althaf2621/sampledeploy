@@ -1,6 +1,6 @@
 node {
 stage('SCM Checkout') {
-      git 'https://github.com/althaf2621/sampledeploy'
+      git 'https://github.com/althaf2621/sampledeploy.git'
       }
       stage('Compile Project'){
      def mvnHome = tool name: 'Maven',type: 'maven'
